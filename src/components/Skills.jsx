@@ -1,3 +1,4 @@
+import React from 'react';
 import { Briefcase, Zap, Users, Code, Wrench } from 'lucide-react';
 
 const Skills = () => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ExternalLink, Lightbulb, Zap, DollarSign } from 'lucide-react';
 
 const Projects = () => {
