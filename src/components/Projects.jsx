@@ -42,26 +42,26 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-20 relative overflow-hidden text-center">
       <div className="container-center section-padding relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow text-center mx-auto">
             Projects & <span className="text-gradient">Entrepreneurship</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full"></div>
-          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full text-center"></div>
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto text-center">
             Innovative solutions that bridge engineering complexity with user-friendly experiences
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group animate-slide-up transition-all duration-500"
+              className="group animate-slide-up transition-all duration-500 text-center mx-auto"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="twitter-card p-6 h-full relative overflow-hidden hover:scale-105 transition-all duration-500">
+              <div className="twitter-card p-6 h-full relative overflow-hidden hover:scale-105 transition-all duration-500 text-center mx-auto">
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
                   <img 

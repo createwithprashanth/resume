@@ -48,26 +48,26 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
+    <section id="skills" className="py-20 relative overflow-hidden text-center">
       <div className="container-center section-padding relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow text-center mx-auto">
             Core <span className="text-gradient">Skills</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full"></div>
-          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full text-center"></div>
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto text-center">
             A comprehensive blend of technical expertise, leadership skills, and domain knowledge
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mx-auto">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="group animate-slide-up hover:scale-105 transition-all duration-500"
+              className="group animate-slide-up hover:scale-105 transition-all duration-500 text-center mx-auto"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="twitter-card p-6 h-full relative overflow-hidden">
+              <div className="twitter-card p-6 h-full relative overflow-hidden text-center mx-auto">
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
                   <img 
@@ -85,7 +85,7 @@ const Skills = () => {
                         {category.icon}
                       </div>
                     </div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-gradient transition-all duration-300">
+                    <h3 className="text-lg font-bold text-white group-hover:text-gradient transition-all duration-300 text-center">
                       {category.title}
                     </h3>
                   </div>

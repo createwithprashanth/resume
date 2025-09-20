@@ -62,26 +62,26 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden text-center">
       <div className="container-center section-padding relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow text-center mx-auto">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full"></div>
-          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto animate-slide-up">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full text-center"></div>
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto animate-slide-up text-center">
             Ready to discuss digitalization opportunities, product management challenges, or potential collaborations? Let's create something extraordinary together.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16 text-center">
           {/* Contact Information */}
           <div className="text-center mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center mx-auto">
               {contactInfo.map((contact, index) => (
                 <div
                   key={contact.label}
-                  className="twitter-card p-6 hover:scale-105 transition-all duration-500 group animate-slide-up"
+                  className="twitter-card p-6 hover:scale-105 transition-all duration-500 group animate-slide-up text-center mx-auto"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-start">
@@ -91,21 +91,21 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white mb-1 group-hover:text-gradient transition-all duration-300">
+                      <h3 className="text-lg font-bold text-white mb-1 group-hover:text-gradient transition-all duration-300 text-center">
                         {contact.label}
                       </h3>
-                      <p className="text-gray-400 text-sm mb-3">{contact.description}</p>
+                      <p className="text-gray-400 text-sm mb-3 text-center">{contact.description}</p>
                       {contact.href ? (
                         <a
                           href={contact.href}
-                          className="text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm"
+                          className="text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm text-center"
                           target={contact.href.startsWith('http') ? '_blank' : undefined}
                           rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
                           {contact.value}
                         </a>
                       ) : (
-                        <span className="text-gray-300 font-medium text-sm">{contact.value}</span>
+                        <span className="text-gray-300 font-medium text-sm text-center">{contact.value}</span>
                       )}
                     </div>
                   </div>

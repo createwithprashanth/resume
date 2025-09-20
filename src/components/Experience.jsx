@@ -54,19 +54,19 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
+    <section id="experience" className="py-20 relative overflow-hidden text-center">
       <div className="container-center section-padding relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow text-center mx-auto">
             Professional <span className="text-gradient">Experience</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full"></div>
-          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full text-center"></div>
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto text-center">
             A journey of innovation, leadership, and technical excellence across diverse industries
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-neural-blue to-accent rounded-full opacity-60"></div>
