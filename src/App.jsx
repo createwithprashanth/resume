@@ -11,17 +11,15 @@ import VantaNet from './components/VantaNet';
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Vanta Net Background - Fixed positioning to cover entire viewport */}
-      <div className="fixed inset-0 w-full h-full z-0">
-        <VantaNet />
-      </div>
+    <div className="relative min-h-screen w-full">
+      {/* Vanta Net Background - Fixed to cover entire viewport */}
+      <VantaNet />
       
       {/* Main Content - Centered and above background */}
-      <div className="relative z-10 min-h-screen w-full flex flex-col items-center justify-start">
-        <div className="w-full max-w-4xl mx-auto px-4 text-center">
+      <div className="relative z-10 min-h-screen w-full">
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Header />
-          <main className="flex flex-col items-center justify-center text-center w-full">
+          <main className="w-full">
             <Hero />
             <About />
             <Skills />
