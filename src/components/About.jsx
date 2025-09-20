@@ -21,7 +21,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image and highlights */}
-          <div className="animate-slide-in-left">
+          <div className="animate-slide-in-left text-center">
             <div className="relative mb-8">
               <div className="twitter-card p-6 text-center">
                 <img 
@@ -45,7 +45,7 @@ const About = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="animate-slide-in-right">
+          <div className="animate-slide-in-right text-center lg:text-left">
             <div className="twitter-card p-8">
               <div className="space-y-6">
                 <div className="relative">

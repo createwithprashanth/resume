@@ -66,26 +66,26 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-neural-blue to-accent rounded-full opacity-60"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-neural-blue to-accent rounded-full opacity-60"></div>
             
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="relative flex items-start mb-12 animate-slide-in-left group"
+                className="relative flex flex-col items-center mb-12 animate-slide-up group text-center"
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 {/* Timeline dot */}
-                <div className={`absolute left-4 w-5 h-5 rounded-full border-2 border-twitter-darker ${
+                <div className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full border-2 border-twitter-darker ${
                   exp.current ? 'bg-gradient-to-r from-primary to-neural-blue animate-pulse-slow' : 'bg-gradient-to-r from-gray-400 to-gray-600'
                 } shadow-lg z-10`}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-neural-blue opacity-30 animate-ping"></div>
                 </div>
                 
                 {/* Content Card */}
-                <div className="ml-12 w-full">
+                <div className="mt-8 w-full max-w-3xl">
                   <div className="twitter-card p-6 hover:scale-105 transition-all duration-500 group-hover:shadow-2xl">
                     {/* Background Image */}
                     <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl overflow-hidden">

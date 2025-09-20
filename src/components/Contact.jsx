@@ -76,7 +76,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Contact Information */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 text-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactInfo.map((contact, index) => (
                 <div
@@ -115,7 +115,7 @@ const Contact = () => {
           </div>
 
           {/* Quick Actions */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center">
             <h3 className="text-xl font-bold text-white mb-6 text-center lg:text-left">
               Quick <span className="text-gradient">Actions</span>
             </h3>
