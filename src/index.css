@@ -17,11 +17,11 @@
 
 @layer components {
   .section-padding {
-    @apply px-6 sm:px-8 lg:px-12;
+    @apply px-4 sm:px-6 lg:px-8;
   }
   
   .container-center {
-    @apply max-w-4xl mx-auto text-center;
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   .twitter-card {

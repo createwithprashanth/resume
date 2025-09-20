@@ -10,28 +10,28 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden text-center">
-      <div className="container-center section-padding relative z-10">
+    <section id="about" className="py-20 relative overflow-hidden">
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow text-center mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in text-glow">
             About <span className="text-gradient">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full text-center"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto animate-slide-up rounded-full"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="text-center">
           {/* Left side - Image and highlights */}
-          <div className="animate-slide-in-left mb-12 text-center mx-auto">
+          <div className="animate-slide-in-left mb-12">
             <div className="relative mb-8">
-              <div className="twitter-card p-6 text-center mx-auto">
+              <div className="twitter-card p-6">
                 <img 
                   src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" 
                   alt="Engineering workspace" 
-                  className="w-full h-48 object-cover rounded-xl mb-6 mx-auto"
+                  className="w-full h-48 object-cover rounded-xl mb-6"
                 />
-                <div className="grid grid-cols-2 gap-4 justify-center mx-auto">
+                <div className="grid grid-cols-2 gap-4">
                   {highlights.map((item, index) => (
-                    <div key={index} className="twitter-card p-4 hover:scale-105 transition-all duration-300 group text-center mx-auto">
+                    <div key={index} className="twitter-card p-4 hover:scale-105 transition-all duration-300 group text-center">
                       <div className={`inline-flex p-3 bg-gradient-to-r ${item.color} rounded-full mb-3 group-hover:animate-spin-slow`}>
                         <item.icon size={20} className="text-white" />
                       </div>
@@ -45,17 +45,17 @@ const About = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="animate-slide-in-right text-center mx-auto">
-            <div className="twitter-card p-8 text-center mx-auto">
+          <div className="animate-slide-in-right">
+            <div className="twitter-card p-8">
               <div className="space-y-6">
                 <div className="relative">
-                  <p className="text-lg text-gray-300 leading-relaxed text-center mx-auto">
+                  <p className="text-lg text-gray-300 leading-relaxed text-center">
                     Dynamic Product Owner and Digitalization Lead with <span className="text-gradient font-semibold">12+ years of experience</span> bridging engineering expertise and product management. Skilled at translating business needs into digital solutions, leading cross-functional teams, and driving AI- and data-driven transformation initiatives.
                   </p>
                 </div>
                 
                 <div className="relative">
-                  <p className="text-lg text-gray-300 leading-relaxed text-center mx-auto">
+                  <p className="text-lg text-gray-300 leading-relaxed text-center">
                     Proven track record in <span className="text-gradient font-semibold">Oil & Gas EPC projects (ADNOC)</span> and software product development (Hexagon), with entrepreneurial experience building AI-powered applications. I specialize in creating innovative solutions that bridge the gap between complex engineering requirements and user-friendly digital experiences.
                   </p>
                 </div>

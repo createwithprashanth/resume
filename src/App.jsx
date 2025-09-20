@@ -11,12 +11,12 @@ import VantaNet from './components/VantaNet';
 
 function App() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative flex flex-col items-center">
       {/* Vanta Net Background */}
       <VantaNet />
       
       {/* Main content */}
-      <div className="relative z-10">
+      <div className="relative z-10 w-full max-w-6xl mx-auto">
         <Header />
         <Hero />
         <About />
