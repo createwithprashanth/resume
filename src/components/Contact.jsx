@@ -74,9 +74,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           {/* Contact Information */}
-          <div className="lg:col-span-2 text-center">
+          <div className="text-center mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactInfo.map((contact, index) => (
                 <div
@@ -115,8 +115,8 @@ const Contact = () => {
           </div>
 
           {/* Quick Actions */}
-          <div className="space-y-6 text-center">
-            <h3 className="text-xl font-bold text-white mb-6 text-center lg:text-left">
+          <div className="space-y-6 text-center max-w-md mx-auto">
+            <h3 className="text-xl font-bold text-white mb-6 text-center">
               Quick <span className="text-gradient">Actions</span>
             </h3>
             {quickActions.map((action, index) => (
@@ -148,7 +148,7 @@ const Contact = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="twitter-card p-12 animate-slide-up max-w-4xl mx-auto">
+          <div className="twitter-card p-12 animate-slide-up max-w-3xl mx-auto">
             <div className="mb-8">
               <img 
                 src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800" 

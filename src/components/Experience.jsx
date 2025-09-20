@@ -66,7 +66,7 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-neural-blue to-accent rounded-full opacity-60"></div>
@@ -85,7 +85,7 @@ const Experience = () => {
                 </div>
                 
                 {/* Content Card */}
-                <div className="mt-8 w-full max-w-3xl">
+                <div className="mt-8 w-full">
                   <div className="twitter-card p-6 hover:scale-105 transition-all duration-500 group-hover:shadow-2xl">
                     {/* Background Image */}
                     <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl overflow-hidden">
@@ -98,9 +98,9 @@ const Experience = () => {
                     
                     {/* Content */}
                     <div className="relative z-10">
-                      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                      <div className="text-center mb-6">
                         <div className="flex-1">
-                          <div className="flex items-center mb-3">
+                          <div className="flex items-center justify-center mb-3">
                             <div className={`p-3 bg-gradient-to-r ${exp.color} rounded-xl mr-4 group-hover:animate-bounce-slow`}>
                               <div className="text-white">
                                 {exp.icon}
@@ -110,7 +110,7 @@ const Experience = () => {
                               <h3 className="text-xl font-bold text-white mb-1 group-hover:text-gradient transition-all duration-300">
                                 {exp.position}
                               </h3>
-                              <div className="flex items-center text-gradient font-semibold">
+                              <div className="flex items-center justify-center text-gradient font-semibold">
                                 <Building size={16} className="mr-2" />
                                 {exp.company}
                               </div>
@@ -118,8 +118,8 @@ const Experience = () => {
                           </div>
                         </div>
                         
-                        <div className="flex flex-col lg:items-end text-gray-400 mt-4 lg:mt-0">
-                          <div className="twitter-card p-3 rounded-xl mb-2">
+                        <div className="flex flex-col items-center text-gray-400 mt-4">
+                          <div className="twitter-card p-3 rounded-xl mb-2 inline-block">
                             <div className="flex items-center mb-1">
                               <Calendar size={14} className="mr-2 text-primary" />
                               <span className="font-medium text-sm">{exp.period}</span>
