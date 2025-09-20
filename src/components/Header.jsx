@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,13 +31,18 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled ? 'glass-card m-4 rounded-2xl' : 'bg-transparent'
     }`}>
       <div className="container-max section-padding">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-gradient">
-            Prashanth Thipparthi
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-gradient-to-r from-primary to-secondary rounded-xl animate-pulse-slow">
+              <Zap className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-2xl font-bold text-gradient">
+              Prashanth Thipparthi
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -46,9 +51,10 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                className="text-white/80 hover:text-white transition-all duration-300 font-medium hover:scale-110 relative group"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
@@ -56,7 +62,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-700 hover:text-primary transition-colors duration-200"
+            className="md:hidden text-white/80 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-lg"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -64,12 +70,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200 bg-white/95 backdrop-blur-sm">
+          <nav className="md:hidden py-4 border-t border-white/20 glass-card mt-4 rounded-xl">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                className="block w-full text-left py-3 px-4 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 font-medium rounded-lg mx-2"
               >
                 {item.name}
               </button>

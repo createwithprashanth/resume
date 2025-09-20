@@ -9,6 +9,8 @@
   
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    min-height: 100vh;
   }
 }
 
@@ -18,18 +20,71 @@
   }
   
   .container-max {
-    @apply max-w-6xl mx-auto;
+    @apply max-w-7xl mx-auto;
   }
   
-  .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500;
+  }
+  
+  .neon-card {
+    @apply bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-primary/30 rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500;
   }
   
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+    @apply bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+  }
+  
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .floating-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    animation: particleFloat 15s linear infinite;
+  }
+  
+  .engineering-grid {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .engineering-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
+      linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 25px 25px, 25px 25px;
+    animation: gridFlow 20s linear infinite;
   }
 }
