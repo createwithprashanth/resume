@@ -126,9 +126,14 @@ const VantaNet = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none z-0"
+      className="w-full h-full pointer-events-none"
       style={{ 
         background: 'linear-gradient(135deg, #0f1419 0%, #15202b 100%)',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh'
       }}
     />
   );
