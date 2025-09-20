@@ -18,7 +18,7 @@ function App() {
       {/* Main content */}
       <div style={{ 
         position: 'relative', 
-        zIndex: 10, 
+        zIndex: 1,
         width: '100%', 
         maxWidth: '800px', 
         margin: '0 auto',
@@ -28,7 +28,8 @@ function App() {
         alignItems: 'center',
         justifyContent: 'center'
       }}>
-        <Header />
+        padding: '0 1rem',
+        background: 'transparent'
         <Hero />
         <About />
         <Skills />
