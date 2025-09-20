@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="animate-slide-up">
             <button
               onClick={() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary group relative overflow-hidden"
+              className="btn-primary group relative overflow-hidden mx-auto"
             >
               <span className="relative z-10 flex items-center">
                 Explore My Journey

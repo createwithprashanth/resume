@@ -29,16 +29,16 @@ const VantaNet = () => {
     // Create nodes
     const createNodes = () => {
       const nodes = [];
-      const nodeCount = Math.floor((width * height) / 15000); // Responsive node count
+      const nodeCount = Math.floor((width * height) / 20000); // Responsive node count
       
       for (let i = 0; i < nodeCount; i++) {
         nodes.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
           radius: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.3,
+          opacity: Math.random() * 0.3 + 0.1,
         });
       }
       return nodes;
@@ -78,8 +78,8 @@ const VantaNet = () => {
 
         if (mouseDistance < 150) {
           const force = (150 - mouseDistance) / 150;
-          node.vx += (node.x - mouseRef.current.x) * force * 0.001;
-          node.vy += (node.y - mouseRef.current.y) * force * 0.001;
+          node.vx += (node.x - mouseRef.current.x) * force * 0.0005;
+          node.vy += (node.y - mouseRef.current.y) * force * 0.0005;
         }
 
         // Draw node
@@ -97,12 +97,14 @@ const VantaNet = () => {
 
           if (distance < 120) {
             const opacity = (120 - distance) / 120 * 0.3;
+            if (opacity > 0.05) {
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(otherNode.x, otherNode.y);
-            ctx.strokeStyle = `rgba(29, 155, 240, ${opacity})`;
+            ctx.strokeStyle = `rgba(29, 155, 240, ${opacity * 0.5})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
+            }
           }
         });
       });

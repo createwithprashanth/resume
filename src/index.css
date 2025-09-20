@@ -17,11 +17,11 @@
 
 @layer components {
   .section-padding {
-    @apply px-6 sm:px-8 lg:px-12;
+    @apply px-4 sm:px-6 lg:px-8;
   }
   
   .container-center {
-    @apply max-w-4xl mx-auto text-center;
+    @apply max-w-2xl mx-auto;
   }
   
   .twitter-card {
@@ -38,40 +38,5 @@
   
   .text-glow {
     text-shadow: 0 0 20px rgba(29, 155, 240, 0.5);
-  }
-  
-  .neural-network {
-    position: fixed;
-    top: 0;
-    width: 300px;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  .neural-network.left {
-    left: 0;
-  }
-  
-  .neural-network.right {
-    right: 0;
-  }
-  
-  .neural-line {
-    stroke: rgba(29, 155, 240, 0.3);
-    stroke-width: 1;
-    fill: none;
-    stroke-dasharray: 5, 5;
-    animation: neuralFlow 8s linear infinite;
-  }
-  
-  .neural-node {
-    fill: rgba(29, 155, 240, 0.6);
-    animation: nodePulse 2s ease-in-out infinite;
-  }
-  
-  .neural-node.active {
-    fill: rgba(0, 212, 255, 0.9);
-    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.8));
   }
 }

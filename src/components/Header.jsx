@@ -34,7 +34,7 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'bg-twitter-darker/95 backdrop-blur-lg border-b border-gray-700/50' : 'bg-transparent'
     }`}>
-      <div className="container-center section-padding">
+      <div className="max-w-6xl mx-auto section-padding">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-gradient-to-r from-primary to-neural-blue rounded-xl animate-pulse-slow">

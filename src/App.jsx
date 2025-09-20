@@ -7,14 +7,13 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import NeuralNetwork from './components/NeuralNetwork';
+import VantaNet from './components/VantaNet';
 
 function App() {
   return (
     <div className="min-h-screen relative">
-      {/* Neural Networks on both sides */}
-      <NeuralNetwork side="left" />
-      <NeuralNetwork side="right" />
+      {/* Vanta Net Background */}
+      <VantaNet />
       
       {/* Main content */}
       <div className="relative z-10">

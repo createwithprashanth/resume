@@ -21,7 +21,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Left side - Image and highlights */}
-          <div className="animate-slide-in-left text-center mb-12">
+          <div className="animate-slide-in-left mb-12">
             <div className="relative mb-8">
               <div className="twitter-card p-6 text-center">
                 <img 
@@ -45,7 +45,7 @@ const About = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="animate-slide-in-right text-center">
+          <div className="animate-slide-in-right">
             <div className="twitter-card p-8">
               <div className="space-y-6">
                 <div className="relative">
@@ -64,7 +64,7 @@ const About = () => {
 
                 <div className="flex flex-wrap gap-3 pt-4 justify-center">
                   {['Product Strategy', 'AI Integration', 'Digital Transformation', 'Team Leadership'].map((skill, index) => (
-                    <span key={index} className="px-4 py-2 bg-primary/20 border border-primary/30 rounded-full text-gray-300 text-sm font-medium hover:scale-105 transition-transform duration-300">
+                    <span key={index} className="px-4 py-2 bg-primary/20 border border-primary/30 rounded-full text-gray-300 text-sm font-medium hover:scale-105 transition-transform duration-300 text-center">
                       {skill}
                     </span>
                   ))}
