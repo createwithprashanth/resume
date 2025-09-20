@@ -11,23 +11,11 @@ import VantaNet from './components/VantaNet';
 
 function App() {
   return (
-    <>
+    <div className="relative min-h-screen w-full">
       {/* Vanta Net Background */}
       <VantaNet />
-      
-      {/* Main content */}
-      <div style={{ 
-        position: 'relative', 
-        zIndex: 1,
-        width: '100%', 
-        maxWidth: '800px', 
-        margin: '0 auto',
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center min-h-screen">
+        <Header />
         padding: '0 1rem',
         background: 'transparent'
         <Hero />
@@ -38,7 +26,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
