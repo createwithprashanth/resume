@@ -32,15 +32,15 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'glass-card m-4 rounded-2xl' : 'bg-transparent'
+      isScrolled ? 'bg-twitter-darker/95 backdrop-blur-lg border-b border-gray-700/50' : 'bg-transparent'
     }`}>
-      <div className="container-max section-padding">
+      <div className="container-center section-padding">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-to-r from-primary to-secondary rounded-xl animate-pulse-slow">
+            <div className="p-2 bg-gradient-to-r from-primary to-neural-blue rounded-xl animate-pulse-slow">
               <Zap className="w-6 h-6 text-white" />
             </div>
-            <div className="text-2xl font-bold text-gradient">
+            <div className="text-xl font-bold text-white">
               Prashanth Thipparthi
             </div>
           </div>
@@ -51,10 +51,10 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-white/80 hover:text-white transition-all duration-300 font-medium hover:scale-110 relative group"
+                className="text-gray-300 hover:text-white transition-all duration-300 font-medium hover:scale-110 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
@@ -62,7 +62,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white/80 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-lg"
+            className="md:hidden text-gray-300 hover:text-white transition-colors duration-200 p-2 hover:bg-gray-700/50 rounded-lg"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -70,12 +70,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-white/20 glass-card mt-4 rounded-xl">
+          <nav className="md:hidden py-4 border-t border-gray-700/50 twitter-card mt-4 rounded-xl">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-3 px-4 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 font-medium rounded-lg mx-2"
+                className="block w-full text-left py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-700/50 transition-all duration-200 font-medium rounded-lg mx-2"
               >
                 {item.name}
               </button>

@@ -7,17 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0ea5e9',
-        'primary-dark': '#0284c7',
-        secondary: '#8b5cf6',
-        accent: '#f59e0b',
-        success: '#10b981',
-        warning: '#f59e0b',
-        error: '#ef4444',
-        'grid-blue': '#3b82f6',
-        'grid-purple': '#8b5cf6',
-        'grid-cyan': '#06b6d4',
-        'grid-emerald': '#10b981',
+        primary: '#1d9bf0',
+        'primary-dark': '#1a8cd8',
+        secondary: '#794bc4',
+        accent: '#f91880',
+        success: '#00ba7c',
+        warning: '#ffad1f',
+        error: '#f4212e',
+        'twitter-blue': '#1d9bf0',
+        'twitter-dark': '#15202b',
+        'twitter-darker': '#0f1419',
+        'twitter-light': '#192734',
+        'neural-blue': '#00d4ff',
+        'neural-purple': '#b794f6',
+        'neural-pink': '#f093fb',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',
@@ -29,8 +32,9 @@ export default {
         'spin-slow': 'spin 8s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
-        'grid-flow': 'gridFlow 20s linear infinite',
-        'particle-float': 'particleFloat 15s linear infinite',
+        'neural-pulse': 'neuralPulse 3s ease-in-out infinite',
+        'neural-flow': 'neuralFlow 8s linear infinite',
+        'node-pulse': 'nodePulse 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -54,26 +58,24 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.5)' },
-          '100%': { boxShadow: '0 0 40px rgba(14, 165, 233, 0.8)' },
+          '0%': { boxShadow: '0 0 20px rgba(29, 155, 240, 0.5)' },
+          '100%': { boxShadow: '0 0 40px rgba(29, 155, 240, 0.8)' },
         },
-        gridFlow: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100vw)' },
+        neuralPulse: {
+          '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(1.1)' },
         },
-        particleFloat: {
-          '0%': { transform: 'translateY(100vh) rotate(0deg)', opacity: '0' },
-          '10%': { opacity: '1' },
-          '90%': { opacity: '1' },
-          '100%': { transform: 'translateY(-100vh) rotate(360deg)', opacity: '0' },
+        neuralFlow: {
+          '0%': { strokeDashoffset: '1000' },
+          '100%': { strokeDashoffset: '0' },
+        },
+        nodePulse: {
+          '0%, 100%': { r: '4' },
+          '50%': { r: '8' },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'grid-pattern': 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
-      },
-      backgroundSize: {
-        'grid': '50px 50px',
       },
     },
   },

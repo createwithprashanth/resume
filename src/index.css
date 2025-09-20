@@ -9,7 +9,8 @@
   
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: #0f1419;
+    color: #ffffff;
     min-height: 100vh;
   }
 }
@@ -19,72 +20,58 @@
     @apply px-4 sm:px-6 lg:px-8;
   }
   
-  .container-max {
-    @apply max-w-7xl mx-auto;
+  .container-center {
+    @apply max-w-4xl mx-auto;
   }
   
-  .glass-card {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500;
-  }
-  
-  .neon-card {
-    @apply bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-primary/30 rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500;
+  .twitter-card {
+    @apply bg-twitter-light/80 backdrop-blur-lg border border-gray-700/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:border-primary/50;
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30;
+    @apply bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-neural-blue to-accent bg-clip-text text-transparent;
   }
   
   .text-glow {
-    text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+    text-shadow: 0 0 20px rgba(29, 155, 240, 0.5);
   }
   
-  .grid-bg {
-    background-image: 
-      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-  }
-  
-  .floating-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-  }
-  
-  .particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-    border-radius: 50%;
-    animation: particleFloat 15s linear infinite;
-  }
-  
-  .engineering-grid {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .engineering-grid::before {
-    content: '';
-    position: absolute;
+  .neural-network {
+    position: fixed;
     top: 0;
+    width: 300px;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .neural-network.left {
     left: 0;
+  }
+  
+  .neural-network.right {
     right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 2px, transparent 2px),
-      radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
-      linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, 25px 25px, 25px 25px;
-    animation: gridFlow 20s linear infinite;
+  }
+  
+  .neural-line {
+    stroke: rgba(29, 155, 240, 0.3);
+    stroke-width: 1;
+    fill: none;
+    stroke-dasharray: 5, 5;
+    animation: neuralFlow 8s linear infinite;
+  }
+  
+  .neural-node {
+    fill: rgba(29, 155, 240, 0.6);
+    animation: nodePulse 2s ease-in-out infinite;
+  }
+  
+  .neural-node.active {
+    fill: rgba(0, 212, 255, 0.9);
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.8));
   }
 }
