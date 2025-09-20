@@ -14,10 +14,25 @@
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   * {
     box-sizing: border-box;
+    text-align: center !important;
+  }
+  
+  #root {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -27,15 +42,29 @@
   }
   
   .container-center {
-    @apply w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .twitter-card {
     @apply bg-twitter-light/80 backdrop-blur-lg border border-gray-700/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:border-primary/50;
+    margin: 0 auto;
+    text-align: center;
   }
   
   .btn-primary {
     @apply bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .text-gradient {
@@ -49,9 +78,28 @@
 
 /* Force center alignment for all content */
 section {
-  @apply w-full flex flex-col items-center justify-center text-center;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
-  @apply text-center;
+h1, h2, h3, h4, h5, h6, p, div, span {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.grid {
+  justify-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+.flex {
+  justify-content: center !important;
+  align-items: center !important;
 }

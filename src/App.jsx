@@ -11,26 +11,33 @@ import VantaNet from './components/VantaNet';
 
 function App() {
   return (
-    <div className="min-h-screen relative">
+    <>
       {/* Vanta Net Background */}
       <VantaNet />
       
       {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full">
-        <div className="w-full max-w-4xl mx-auto px-4">
-          <Header />
-          <div className="flex flex-col items-center justify-center text-center w-full">
-            <Hero />
-            <About />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Contact />
-            <Footer />
-          </div>
-        </div>
+      <div style={{ 
+        position: 'relative', 
+        zIndex: 10, 
+        width: '100%', 
+        maxWidth: '800px', 
+        margin: '0 auto',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <Header />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
-    </div>
+    </>
   );
 }
 
