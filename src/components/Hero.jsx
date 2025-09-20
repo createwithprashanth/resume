@@ -3,9 +3,9 @@ import { MapPin, Phone, Mail, Globe, Rocket, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="animate-fade-in">
+    <section className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
+      <div className="w-full max-w-4xl mx-auto px-4 text-center">
+        <div className="animate-fade-in flex flex-col items-center justify-center">
           {/* Profile Image */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
@@ -27,43 +27,45 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 text-glow text-center">
-            Prashanth <span className="text-gradient animate-glow">Thipparthi</span>
-          </h1>
-          
-          <div className="twitter-card p-6 mb-8 animate-slide-up max-w-3xl mx-auto">
-            <h2 className="text-xl md:text-2xl text-gradient mb-4 font-semibold text-center">
-              Senior Product Owner | Digitalization Lead | Engineering Domain Expert
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 animate-slide-up max-w-4xl mx-auto">
-            {[
-              { icon: MapPin, text: "Abu Dhabi, UAE", color: "from-primary to-neural-blue" },
-              { icon: Phone, text: "+971-769-4886", color: "from-secondary to-neural-purple" },
-              { icon: Mail, text: "prashanth.thipparthi@outlook.com", color: "from-accent to-warning" },
-              { icon: Globe, text: "www.xyra-ai.com", color: "from-success to-neural-blue" }
-            ].map((item, index) => (
-              <div key={index} className="twitter-card p-4 hover:scale-105 transition-all duration-300 group">
-                <div className={`inline-flex p-3 bg-gradient-to-r ${item.color} rounded-full mb-3 group-hover:animate-bounce-slow`}>
-                  <item.icon size={18} className="text-white" />
+          <div className="text-center w-full flex flex-col items-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 text-glow text-center">
+              Prashanth <span className="text-gradient animate-glow">Thipparthi</span>
+            </h1>
+            
+            <div className="twitter-card p-6 mb-8 animate-slide-up max-w-3xl mx-auto">
+              <h2 className="text-xl md:text-2xl text-gradient mb-4 font-semibold text-center">
+                Senior Product Owner | Digitalization Lead | Engineering Domain Expert
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-neural-blue mx-auto rounded-full"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 animate-slide-up max-w-4xl mx-auto justify-items-center">
+              {[
+                { icon: MapPin, text: "Abu Dhabi, UAE", color: "from-primary to-neural-blue" },
+                { icon: Phone, text: "+971-769-4886", color: "from-secondary to-neural-purple" },
+                { icon: Mail, text: "prashanth.thipparthi@outlook.com", color: "from-accent to-warning" },
+                { icon: Globe, text: "www.xyra-ai.com", color: "from-success to-neural-blue" }
+              ].map((item, index) => (
+                <div key={index} className="twitter-card p-4 hover:scale-105 transition-all duration-300 group text-center mx-auto">
+                  <div className={`inline-flex p-3 bg-gradient-to-r ${item.color} rounded-full mb-3 group-hover:animate-bounce-slow`}>
+                    <item.icon size={18} className="text-white" />
+                  </div>
+                  <p className="text-gray-300 text-sm font-medium text-center">{item.text}</p>
                 </div>
-                <p className="text-gray-300 text-sm font-medium text-center">{item.text}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="animate-slide-up text-center">
-            <button
-              onClick={() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary group relative overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center">
-                Explore My Journey
-                <Rocket className="ml-2 w-5 h-5 group-hover:animate-bounce-slow" />
-              </span>
-            </button>
+            <div className="animate-slide-up text-center">
+              <button
+                onClick={() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })}
+                className="btn-primary group relative overflow-hidden"
+              >
+                <span className="relative z-10 flex items-center">
+                  Explore My Journey
+                  <Rocket className="ml-2 w-5 h-5 group-hover:animate-bounce-slow" />
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

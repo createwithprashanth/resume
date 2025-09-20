@@ -12,6 +12,12 @@
     background: #0f1419;
     color: #ffffff;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
   }
 }
 
@@ -21,7 +27,7 @@
   }
   
   .container-center {
-    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center;
   }
   
   .twitter-card {
@@ -39,4 +45,13 @@
   .text-glow {
     text-shadow: 0 0 20px rgba(29, 155, 240, 0.5);
   }
+}
+
+/* Force center alignment for all content */
+section {
+  @apply w-full flex flex-col items-center justify-center text-center;
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+  @apply text-center;
 }
