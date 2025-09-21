@@ -37,7 +37,7 @@ const VantaNet = () => {
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           radius: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.5 + 0.2,
+          opacity: Math.random() * 0.8 + 0.2,
         });
       }
       return nodes;
@@ -77,15 +77,19 @@ const VantaNet = () => {
 
         if (mouseDistance < 150) {
           const force = (150 - mouseDistance) / 150;
-          node.vx += (node.x - mouseRef.current.x) * force * 0.001;
-          node.vy += (node.y - mouseRef.current.y) * force * 0.001;
+          node.vx += (node.x - mouseRef.current.x) * force * 0.003;
+          node.vy += (node.y - mouseRef.current.y) * force * 0.003;
         }
 
-        // Draw node
+        // Draw node with glow
+        ctx.save();
+        ctx.shadowColor = 'rgba(29, 155, 240, 0.8)';
+        ctx.shadowBlur = 15;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(29, 155, 240, ${node.opacity})`;
         ctx.fill();
+        ctx.restore();
 
         // Draw connections
         nodesRef.current.slice(i + 1).forEach((otherNode) => {
@@ -94,9 +98,9 @@ const VantaNet = () => {
             Math.pow(node.y - otherNode.y, 2)
           );
 
-          if (distance < 100) {
-            const opacity = (100 - distance) / 100 * 0.4;
-            if (opacity > 0.05) {
+          if (distance < 150) {
+            const opacity = (150 - distance) / 150 * 0.6;
+            if (opacity > 0.1) {
               ctx.beginPath();
               ctx.moveTo(node.x, node.y);
               ctx.lineTo(otherNode.x, otherNode.y);
@@ -127,7 +131,6 @@ const VantaNet = () => {
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ 
-        background: 'linear-gradient(135deg, #0f1419 0%, #15202b 100%)',
         width: '100vw',
         height: '100vh'
       }}

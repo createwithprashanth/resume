@@ -11,24 +11,22 @@ import VantaNet from './components/VantaNet';
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full">
-      {/* Vanta Net Background - Fixed to cover entire viewport */}
+    <div className="relative min-h-screen w-full bg-gradient-to-br from-twitter-darker via-twitter-dark to-twitter-darker">
+      {/* Animated Background */}
       <VantaNet />
       
-      {/* Main Content - Centered and above background */}
-      <div className="relative z-10 min-h-screen w-full">
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Header />
-          <main className="w-full">
-            <Hero />
-            <About />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Contact />
-            <Footer />
-          </main>
-        </div>
+      {/* Main Content */}
+      <div className="relative z-10 w-full">
+        <Header />
+        <main className="w-full">
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+          <Footer />
+        </main>
       </div>
     </div>
   );

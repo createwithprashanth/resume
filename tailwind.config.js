@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,css}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -32,9 +32,6 @@ export default {
         'spin-slow': 'spin 8s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
-        'neural-pulse': 'neuralPulse 3s ease-in-out infinite',
-        'neural-flow': 'neuralFlow 8s linear infinite',
-        'node-pulse': 'nodePulse 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -61,21 +58,6 @@ export default {
           '0%': { boxShadow: '0 0 20px rgba(29, 155, 240, 0.5)' },
           '100%': { boxShadow: '0 0 40px rgba(29, 155, 240, 0.8)' },
         },
-        neuralPulse: {
-          '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-          '50%': { opacity: '0.8', transform: 'scale(1.1)' },
-        },
-        neuralFlow: {
-          '0%': { strokeDashoffset: '1000' },
-          '100%': { strokeDashoffset: '0' },
-        },
-        nodePulse: {
-          '0%, 100%': { r: '4' },
-          '50%': { r: '8' },
-        },
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
